@@ -156704,11 +156704,12 @@ var printf_ans = read_mem_as_string(printf_buf, printf_buf_end-printf_buf);
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
-if(main_ret == 179 || main_ret == 0){
-    document.getElementById("progress").innerHTML="PS4 Jailbreak 7.5X Jailbreak Complete !!";
-    localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount;}
-else if(main_ret != 1){
-    localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount;
-    document.getElementById("progress").innerHTML="PS4 Jailbreak 7.5X Jailbreak Failed, Please Restart Your Console and Start Again!!!";
-	alert("PS4 Jailbreak Failed. !! Please Restart Your Console and Start Again!!!");}
+if (main_ret == 179 || main_ret == 0) {
+  localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount;
+  window.progress.innerHTML='Exploit Loaded ✔Now Load Your Payloads';
+} 
+else if (main_ret != 1){
+  localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount;
+  window.progress.innerHTML='Exploit Failed, Reboot your PS4 and try again';
+}
 }
