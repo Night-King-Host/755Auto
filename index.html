@@ -219,6 +219,7 @@ mymenu.style.display="block";
 <button class="button" onMouseOver="progress.innerHTML='GoldHen v1.0 - By SiSTRo'"; onmouseout="progress.innerHTML='Night King 7.55 AUTO'" onclick="load_goldhen(); return false" style="font-size:20px;text-align:center;background-color: goldenrod;color:white">GoldHen V1.0</button>
 <button class="button" onMouseOver="progress.innerHTML='GoldHen v1.1 - By SiSTRo'"; onmouseout="progress.innerHTML='Night King 7.55 AUTO'" onclick="load_goldhenb(); return false" style="font-size:20px;text-align:center;background-color: goldenrod;color:white">GoldHen V1.1</button>
 <button class="button" onMouseOver="progress.innerHTML='Mira2B + Spoof V9.99'"; onmouseout="progress.innerHTML='Night King 7.55 AUTO'" onclick="load_mira(); return false" style="font-size:20px;text-align:center;color:#4863A0">Mira2B</button>
+<button class="button" onMouseOver="progress.innerHTML='Orbis-ToolBox Alpha Build 1167 - By OSM'"; onmouseout="progress.innerHTML='Night King 7.55 AUTO'" onclick="load_orbistoolbox(); return false" style="font-size:20px;text-align:center;background-color: orangered;color:white">Orbis-ToolBox Alpha</button>
 <br>
 <div style=font-size:20px;text-align:center;color:yellow;>PAYLOADS</div>
 <button class="button" onMouseOver="progress.innerHTML='Binloader'"; onmouseout="progress.innerHTML='Night King 7.55 AUTO'" onclick="load_binloader(); return false" style="font-size:20px;text-align:center;color:#4863A0">Binloader</button>
@@ -323,6 +324,13 @@ function load_mira(){
 progress.innerHTML='Loading Mira2b ...';
 LoadedMSG="Mira2b Loaded";
 PLfile = "pl_mira2b.bin"
+loadScript2();
+}
+
+function load_orbistoolbox(){
+progress.innerHTML='Loading Orbis-ToolBox Alpha Build 1167 ...';
+LoadedMSG="Orbis-ToolBox Alpha Loaded";
+PLfile = "pl_orbistoolbox.bin"
 loadScript2();
 }
 
