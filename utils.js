@@ -7,8 +7,8 @@ function debug_log(msg) {
 	let textNode = document.createTextNode(msg);
 	let node = document.createElement("p").appendChild(textNode);
 
-	dlog.appendChild(node);
-	dlog.appendChild(document.createElement("br"));
+	document.body.appendChild(node);
+	document.body.appendChild(document.createElement("br"));
 }
 
 // The following functions are taken from https://github.com/saelo/jscpwn/:
