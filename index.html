@@ -1,105 +1,106 @@
 <html manifest="offlinexmb.cache">
-  <style>
-    .bg {
-      /* The image used */
-      background-image: url("1.jpg");
-      font-family: system-ui;
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      color:white;
-      font-size:20px;
-      text-align:center;
-      }
-  .button {
-    background-color: white;  
-    border-radius: 5px;
-    border: 2px solid black;
-    color: #4863A0;
-    padding: .5em;
-    text-decoration: none;
-    display:inline-table;
-    font-family: system-ui;
-    font-size: 20px;
-    text-align: center;
-    width: 200px;
-    height: 50px; 
-  }
-  .button:focus,
-  .button:hover {
-    box-shadow: 0 5px 50px 0 white;
-    color: #4863A0;
-    border-radius: 10px;}
-
-    .temp {
-    background-color: white;  
-    border-radius: 5px;
-    border: 2px solid black;
-    color: white;
-    padding: .5em;
-    text-decoration: none;
-    display:inline-table;
-    font-family: system-ui;
-    font-size: 20px;
-    text-align: center;
-    width: 50px;
-    height: 25px; 
+    <style>
+          .bg {
+		        /* The image used */
+		        background-image: url("1.jpg");
+		        font-family: system-ui;
+		        /* Center and scale the image nicely */
+		        background-position: center;
+		        background-repeat: no-repeat;
+            background-size: cover;
+            color:white;
+            font-size:20px;
+            text-align:center;
+            }
+        .button {
+          background-color: white;  
+          border-radius: 5px;
+          border: 2px solid black;
+          color: #4863A0;
+          padding: .5em;
+          text-decoration: none;
+          display:inline-table;
+          font-family: system-ui;
+          font-size: 20px;
+          text-align: center;
+          width: 200px;
+          height: 50px; 
+        }
+        .button:focus,
+        .button:hover {
+          box-shadow: 0 5px 50px 0 white;
+          color: #4863A0;
+          border-radius: 10px;}
     
-      }
-
-  .temp:focus,
-  .temp:hover {
-  box-shadow: 0 5px 50px 0 white;
-  color: white;
-  border-radius: 10px;}
-
-  .fail{
-      float:right;
-      margin-right:2.25%;
-      margin-top: 11px;
-      font-weight:bold;
-      font-size:28px;
-      color: white;
-       }
-     .pass {
-     float:left;
-     margin-left:1.25%;
-     font-weight:bold;
-     margin-top: 11px;
-     font-size:28px;
-     color: white;
-     }
-
-     .titlehead {
-        background-color: black;  
-        border-radius: 5px;
-        color: yellow;
-        padding: .5em;
-        text-decoration: none;
-        text-align: center;
-        margin-top: -10px;
-        margin-bottom: -10px;
-        font-family: system-ui;
-        font-size:30px;
-      }
-
-      .titlehead:focus,
-      .titlehead:hover {
+          .temp {
+          background-color: white;  
+          border-radius: 5px;
+          border: 2px solid black;
+          color: white;
+          padding: .5em;
+          text-decoration: none;
+          display:inline-table;
+          font-family: system-ui;
+          font-size: 20px;
+          text-align: center;
+          width: 50px;
+          height: 25px; 
+          
+            }
+    
+        .temp:focus,
+        .temp:hover {
         box-shadow: 0 5px 50px 0 white;
-        background-color: rgb(1, 1, 22);
-        color: yellow;
-      }
-
-</style>
+        color: white;
+        border-radius: 10px;}
+    
+        .fail{
+            float:right;
+            margin-right:2.25%;
+            margin-top: 11px;
+            font-weight:bold;
+            font-size:28px;
+            color: white;
+             }
+           .pass {
+           float:left;
+           margin-left:1.25%;
+           font-weight:bold;
+           margin-top: 11px;
+           font-size:28px;
+           color: white;
+           }
+    
+           .titlehead {
+              background-color: black;  
+              border-radius: 5px;
+              color: yellow;
+              padding: .5em;
+              text-decoration: none;
+              text-align: center;
+              margin-top: -10px;
+              margin-bottom: -10px;
+              font-family: system-ui;
+              font-size:30px;
+            }
+    
+            .titlehead:focus,
+            .titlehead:hover {
+              box-shadow: 0 5px 50px 0 white;
+              background-color: rgb(1, 1, 22);
+              color: yellow;
+            }
+    
+    </style>
 <head>
-<title>Night King 7.55 FW Full Auto Exploit</title>
+<title>Night King 7.55 FW Full Auto Exploit 1.0</title>
 <script>
-  function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%"};
-  function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";localStorage.isNK755Acached=true;},1000);setTimeout(function(){window.msgs.innerHTML="Turn Off the Internet & Reopen to Run the Webkit!!";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-  </script>
-  <body class="bg" onload="go()">
-<h1 id=msgs class="titlehead">Night King 7.55 FW Full Auto Exploit</h1>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%"};
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";localStorage.isNK755Acached=true;},1000);setTimeout(function(){window.msgs.innerHTML="Turn Off the Internet & Reopen to Run the Webkit!!";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+<body class="bg" onload="go()">
+<h1 id=msgs class="titlehead">Night King 7.55 FW Full Auto Exploit 1.0</h1>
+<br>
 <div id=dlog></div>
 <button style=opacity:0 id="input1" onfocus="handle2()"></button>
 <button style=opacity:0 id="input2"></button>
