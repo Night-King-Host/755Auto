@@ -94923,7 +94923,7 @@ setTimeout(function(){
     db([0, 0]); // 0x0
     //L12960:
     db([2, 0, 0, 0, 0, 0]);
-    progress.innerHTML=LoadedMSG;
+    msgs.innerHTML=LoadedMSG;
     setTimeout(function(){
     pivot(ropchain);
     },500);

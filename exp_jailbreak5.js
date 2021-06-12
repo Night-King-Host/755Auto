@@ -156706,10 +156706,10 @@ var _ = malloc_nogc.pop();
 var _ = malloc_nogc.pop();
 if (main_ret == 179 || main_ret == 0) {
   localStorage.passcount = ++localStorage.passcount;window.passCounter.innerHTML=localStorage.passcount;
-  window.progress.innerHTML='Exploit Loaded ✔Now Load Your Payloads';
+  window.msgs.innerHTML='Exploit Loaded ✔Now Load Your Payloads';
 } 
 else if (main_ret != 1){
   localStorage.failcount = ++localStorage.failcount;window.failCounter.innerHTML=localStorage.failcount;
-  window.progress.innerHTML='Exploit Failed, Reboot your PS4 and try again';
+  window.msgs.innerHTML='Exploit Failed, Reboot your PS4 and try again';
 }
 }
