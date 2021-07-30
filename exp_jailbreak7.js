@@ -1,5 +1,5 @@
 function jailbreak(){
-    var ropchain_array = new Uint32Array(499814);
+var ropchain_array = new Uint32Array(499814);
 var ropchain = read_ptr_at(addrof(ropchain_array)+0x10);
 var ropchain_offset = 2;
 function set_gadget(val)
