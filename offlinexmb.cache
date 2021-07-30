@@ -1,7 +1,10 @@
 CACHE MANIFEST 
-# 7.55AUTO 11-06-2021
+# 7.55AUTO V1.1 30-07-2021
 
 1.jpg
+int64.js
+ps4.js
+utils.js
 blob.js
 exp_jailbreak1.js
 exp_jailbreak2.js
@@ -9,10 +12,10 @@ exp_jailbreak3.js
 exp_jailbreak4.js
 exp_jailbreak5.js
 exp_jailbreak6.js
+exp_jailbreak7.js
 exp_loaderBL.js
 exp_loaderPL.js
 index.html
-int64.js
 pl_app2usb.bin
 pl_backup.bin
 pl_disabledex.bin
@@ -42,8 +45,6 @@ pl_rifrenamer.bin
 pl_todex.bin
 pl_webactivator.bin
 pl_webrte.bin
-ps4.js
-utils.js
 fan_control\pl_fancontrol50.bin
 fan_control\pl_fancontrol55.bin
 fan_control\pl_fancontrol60.bin

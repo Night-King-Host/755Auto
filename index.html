@@ -94,13 +94,13 @@
     
     </style>
 <head>
-<title>Night King 7.55 FW Full Auto Exploit 1.0</title>
+<title>Night King 7.55 FW Full Auto Exploit 1.1</title>
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%"};
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully";localStorage.isNK755Acached=true;},1000);setTimeout(function(){window.msgs.innerHTML="Turn Off the Internet & Reopen to Run the Webkit!!";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 <body class="bg" onload="go()">
-<h1 id=msgs class="titlehead">Night King 7.55 FW Full Auto Exploit 1.0</h1>
+<h1 id=msgs class="titlehead">Night King 7.55 FW Full Auto Exploit 1.1</h1>
 <br>
 <div id=dlog></div>
 <button style=opacity:0 id="input1" onfocus="handle2()"></button>
@@ -148,56 +148,60 @@ mymenu.style.display="block";
     <a class="pass" style="color: green;text-shadow: 4px 4px 4px black;font-size:30px; font-weight: bold;">Pass = <span id=passCounter></span></a><a  class="fail" style="color: red;text-shadow: 4px 4px 4px black;font-size:30px; font-weight: bold;">Fail = <span id=failCounter></span> </a>
     <div style="width:100%;font-size:20px;color:white">PS4 Firmware <span id="PS4fw"></span></div>
     <br><div style=font-size:16px;text-align:center;color:white;>Set Fan Treshold The PS4 default temp is 79°C</div>
-    <a href="#" class="temp" onMouseOver="msgs.innerHTML='Fan Control Set Temp 50c'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_fancontrol50(); return false" style="font-size:15px;text-align:center;color:#5B90F6">50c</a>&nbsp;
-    <a href="#" class="temp" onMouseOver="msgs.innerHTML='Fan Control Set Temp 55c'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_fancontrol55(); return false" style="font-size:15px;text-align:center;color:#5B90F6">55c</a>&nbsp;
-    <a href="#" class="temp" onMouseOver="msgs.innerHTML='Fan Control Set Temp 60c'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_fancontrol60(); return false" style="font-size:15px;text-align:center;color:#ff7f7f">60c</a>&nbsp;
-    <a href="#" class="temp" onMouseOver="msgs.innerHTML='Fan Control Set Temp 65c'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_fancontrol65(); return false" style="font-size:15px;text-align:center;color:#ff4c4c">65c</a>&nbsp;
-    <a href="#" class="temp" onMouseOver="msgs.innerHTML='Fan Control Set Temp 70c'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_fancontrol70(); return false" style="font-size:15px;text-align:center;color:#ff4c4c">70c</a>&nbsp;
+    <a href="#" class="temp" onMouseOver="msgs.innerHTML='Fan Control Set Temp 50c'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_fancontrol50(); return false" style="font-size:15px;text-align:center;color:#5B90F6">50c</a>&nbsp;
+    <a href="#" class="temp" onMouseOver="msgs.innerHTML='Fan Control Set Temp 55c'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_fancontrol55(); return false" style="font-size:15px;text-align:center;color:#5B90F6">55c</a>&nbsp;
+    <a href="#" class="temp" onMouseOver="msgs.innerHTML='Fan Control Set Temp 60c'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_fancontrol60(); return false" style="font-size:15px;text-align:center;color:#ff7f7f">60c</a>&nbsp;
+    <a href="#" class="temp" onMouseOver="msgs.innerHTML='Fan Control Set Temp 65c'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_fancontrol65(); return false" style="font-size:15px;text-align:center;color:#ff4c4c">65c</a>&nbsp;
+    <a href="#" class="temp" onMouseOver="msgs.innerHTML='Fan Control Set Temp 70c'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_fancontrol70(); return false" style="font-size:15px;text-align:center;color:#ff4c4c">70c</a>&nbsp;
     <br>
     <div style=font-size:20px;text-align:center;color:yellow;>KERNEL EXPLOIT VERSION</div>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy March 17, 2021 (Initial JB)'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_exploit1(); return false">March 17th JB</button>&nbsp;
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy April 28, 2021 (Reduce sleeps in jb.c to speed up JB)'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_exploit2(); return false">April 28th JB </button>&nbsp;
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy May 02nd, 2021 (Make delays slightly larger)'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_exploit3(); return false">May 02nd JB</button>&nbsp;
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy May 20th, 2021 (Retry the exploit on known-recoverable failures)'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_exploit4(); return false">May 20th JB</button>&nbsp;
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy May 27th, 2021 (Add source Unix sockets to the fixup list )'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_exploit5(); return false">May 27th JB</button>&nbsp;
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy June 03rd, 2021 (Imitate legit network traffic before exploit)'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_exploit6(); return false">June 03rd JB</button>&nbsp;
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy March 17, 2021 (Initial JB)'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_exploit1(); return false">March 17th JB</button>&nbsp;
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy April 28, 2021 (Reduce sleeps in jb.c to speed up JB)'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_exploit2(); return false">April 28th JB </button>&nbsp;
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy May 02nd, 2021 (Make delays slightly larger)'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_exploit3(); return false">May 02nd JB</button>&nbsp;
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy May 20th, 2021 (Retry the exploit on known-recoverable failures)'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_exploit4(); return false">May 20th JB</button>&nbsp;
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy May 27th, 2021 (Add source Unix sockets to the fixup list )'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_exploit5(); return false">May 27th JB</button>&nbsp;
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy June 03rd, 2021 (Imitate legit network traffic before exploit)'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_exploit6(); return false">June 03rd JB</button>&nbsp;
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel Exploit - By Sleirsgoevy July 20th, 2021 (Add post-exploit cleanup spray)'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_exploit7(); return false">July 20th JB</button>&nbsp;
     <br>
     <div style=font-size:20px;text-align:center;color:yellow;>GOLDHEN / MIRA</div>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='GoldHen v1.0 - By SiSTRo'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_goldhen(); return false" style="font-size:20px;text-align:center;background-color: goldenrod;color:white">GoldHen V1.0</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='GoldHen v1.1 - By SiSTRo'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_goldhenb(); return false" style="font-size:20px;text-align:center;background-color: goldenrod;color:white">GoldHen V1.1</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Mira2B + Spoof V9.99'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_mira(); return false">Mira2B</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Orbis-ToolBox Alpha Build 1167 - By OSM'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_orbistoolbox(); return false" style="background-color: orangered;color:white">Orbis-ToolBox</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='GoldHen v1.0 - By SiSTRo'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_goldhen(); return false" style="font-size:20px;text-align:center;background-color: goldenrod;color:white">GoldHen V1.0</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='GoldHen v1.1 - By SiSTRo'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_goldhenb(); return false" style="font-size:20px;text-align:center;background-color: goldenrod;color:white">GoldHen V1.1</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Mira2B + Spoof V9.99'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_mira(); return false">Mira2B</button>
     <br>
     <div style=font-size:20px;text-align:center;color:yellow;>PAYLOADS</div>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Binloader'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_binloader(); return false">Binloader</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Disable-Updates v1.0 - By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_disableupdates(); return false">Disable-Updates</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Enable-Updates v1.0 - By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_enableupdates(); return false">Enable-Updates</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='App-2-Usb - Original Version By Stooged / 7.55 Port By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_app2usb(); return false">App-2-Usb</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='FakeUSB v1.0 - By Sleirsgoevy / Mod By Leeful'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_fakeusb() ; return false">FakeUSB</button> 
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Dump Game Only v1.8 - Original Version By xVortex / 7.55 Port Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_dumper(); return false">Game-Dumper</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Enable Browser / 7.55 Port Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_enablebrowser(); return false">Enable-Browser</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Orbis-ToolBox Alpha Build 1167 - By OSM'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_orbistoolbox(); return false" style="background-color: orangered;color:white">Orbis-ToolBox</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='WebRTE v1.0 - By PS4 Trainer'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_webrte(); return false" style="font-size:20px;text-align:center;background-color: blue;color:white">WebRTE</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Tylermods PS4 Offline Host Trainer - By Kameleon'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_trainer(); return false" style="font-size:20px;text-align:center;background-color: green;color:white">PS4-Trainer</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Web-Activator - By Sleirsgoevy'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_webactivator(); return false" style="background-color: white;color:#4863A0">Web-Activator</button>    
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Binloader'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_binloader(); return false">Binloader</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Disable-Updates v1.0 - By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_disableupdates(); return false">Disable-Updates</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Enable-Updates v1.0 - By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_enableupdates(); return false">Enable-Updates</button>
     <br>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Exitidu / 7.55 Port Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_exitidu(); return false">Exitidu</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Rifrenamer / 7.55 Port Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_rifrenamer(); return false">Rifrenamer</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Ftp v1.3 - Original Version By xVortex / 7.55 Port By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_ftp(); return false">Ftp</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='History-Blocker - v2.0 Original Version By Stooged / 7.55 Port By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_historyblocker(); return false">History-Blocker</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel-Dumper - v1.0 Original Version By Eversion / 7.55 Port By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_kerneldumper(); return false">Kernel-Dumper</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Ps4Debug 7.55 - By ctn 1.5.4.2 Rev2'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_ps4debug(); return false">Ps4Debug</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Web-Activator - By Sleirsgoevy'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_webactivator(); return false" style="background-color: blue;color:white">Web-Activator</button>    
+    <button class="button pointer" onMouseOver="msgs.innerHTML='App-2-Usb - Original Version By Stooged / 7.55 Port By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_app2usb(); return false">App-2-Usb</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Exitidu / 7.55 Port Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_exitidu(); return false">Exitidu</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Rifrenamer / 7.55 Port Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_rifrenamer(); return false">Rifrenamer</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Ftp v1.3 - Original Version By xVortex / 7.55 Port By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_ftp(); return false">Ftp</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='History-Blocker - v2.0 Original Version By Stooged / 7.55 Port By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_historyblocker(); return false">History-Blocker</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Kernel-Dumper - v1.0 Original Version By Eversion / 7.55 Port By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_kerneldumper(); return false">Kernel-Dumper</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Ps4Debug 7.55 - By ctn 1.5.4.2 Rev2'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_ps4debug(); return false">Ps4Debug</button>
     <br>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Linux 1gb - By Sleirsgoevy'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_Linux1gb(); return false">Linux-1gb</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Linux 3gb - By Sleirsgoevy'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_Linux3gb(); return false">Linux-3gb</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='DB-Backup v1.0 - By Leeful / 7.55 Port By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_backup(); return false">DB-Backup</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='DB-Restore v1.0 - By Leeful / 7.55 Port Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_restore(); return false">DB-Restore</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Enable-Dex v1.0 - By notzecoxao'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_enabledex(); return false">Enable-Dex</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Disable-Dex v1.0 - By Leeful'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_disabledex(); return false">Disable-Dex</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='WebRTE v1.0 - By PS4 Trainer'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_webrte(); return false">WebRTE</button>
-    <br><div style=font-size:20px;text-align:center;color:yellow;>GTA V MODS</div>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.00 - Original Version By RF0oDxM0Dz'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'"; onclick="load_gtava1(); return false">ArabicGuy v1.00</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.27 - Original Version By RF0oDxM0Dz'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_gtava2(); return false">ArabicGuy v1.27</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.32 - Original Version By RF0oDxM0Dz'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_gtava3(); return false">ArabicGuy v1.32</button>
-    <button class="button pointer" onMouseOver="msgs.innerHTML='Lamance GTA V v1.32 - By david1337hax'"; onmouseout="msgs.innerHTML='Night King 7.55 AUTO'" onclick="load_gtavl(); return false">Lamance v1.32</button>
-    <br><br>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Linux 1gb - By Sleirsgoevy'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_Linux1gb(); return false">Linux-1gb</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Linux 3gb - By Sleirsgoevy'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_Linux3gb(); return false">Linux-3gb</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='DB-Backup v1.0 - By Leeful / 7.55 Port By Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_backup(); return false">DB-Backup</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='DB-Restore v1.0 - By Leeful / 7.55 Port Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_restore(); return false">DB-Restore</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Enable-Dex v1.0 - By notzecoxao'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_enabledex(); return false">Enable-Dex</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Disable-Dex v1.0 - By Leeful'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_disabledex(); return false">Disable-Dex</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='FakeUSB v1.0 - By Sleirsgoevy / Mod By Leeful'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_fakeusb() ; return false">FakeUSB</button> 
+    <br>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Dump Game Only v1.8 - Original Version By xVortex / 7.55 Port Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_dumper(); return false">Game-Dumper</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Enable Browser / 7.55 Port Al Azif'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_enablebrowser(); return false">Enable-Browser</button>
+    <br>
+    <div style=font-size:20px;text-align:center;color:yellow;>GTA V MODS</div>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.00 - Original Version By RF0oDxM0Dz'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'"; onclick="load_gtava1(); return false">ArabicGuy v1.00</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.27 - Original Version By RF0oDxM0Dz'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_gtava2(); return false">ArabicGuy v1.27</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='ArabicGuy GTA V v1.32 - Original Version By RF0oDxM0Dz'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_gtava3(); return false">ArabicGuy v1.32</button>
+    <button class="button pointer" onMouseOver="msgs.innerHTML='Lamance GTA V v1.32 - By david1337hax'"; onmouseout="msgs.innerHTML='Night King 7.55 FW AUTO V1.1'" onclick="load_gtavl(); return false">Lamance v1.32</button>
+    <br>
     <a style='font-size:20px;text-align:center;color:#FFD700;'>
         Main Owner : <a style='font-size:20px;text-align:center;color:white;'>
         SALT - Find Us In Telegram if you have any kind of issues!:&nbsp;<a href="http://t.me/Salt753194" style='font-size:20px;text-align:center;color:red;'>@Salt753194</a></h1>
@@ -221,37 +225,43 @@ window.failCounter.innerHTML=localStorage.failcount;
 function load_exploit1(){
 msgs.innerHTML='Loading Exploit Please Wait ...';
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
-function loadScript(){getScript("exp_jailbreak1.js",function(){setTimeout(jailbreak,000);});}loadScript();
+function loadScript(){getScript("exp_jailbreak1.js",function(){setTimeout(jailbreak,1000);});}loadScript();
 }
 
 function load_exploit2(){
 msgs.innerHTML='Loading Exploit Please Wait ...';
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
-function loadScript(){getScript("exp_jailbreak2.js",function(){setTimeout(jailbreak,000);});}loadScript();
+function loadScript(){getScript("exp_jailbreak2.js",function(){setTimeout(jailbreak,1000);});}loadScript();
 }
 
 function load_exploit3(){
 msgs.innerHTML='Loading Exploit Please Wait ...';
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
-function loadScript(){getScript("exp_jailbreak3.js",function(){setTimeout(jailbreak,000);});}loadScript();
+function loadScript(){getScript("exp_jailbreak3.js",function(){setTimeout(jailbreak,1000);});}loadScript();
 }
 
 function load_exploit4(){
 msgs.innerHTML='Loading Exploit Please Wait ...';
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
-function loadScript(){getScript("exp_jailbreak4.js",function(){setTimeout(jailbreak,000);});}loadScript();
+function loadScript(){getScript("exp_jailbreak4.js",function(){setTimeout(jailbreak,1000);});}loadScript();
 }
 
 function load_exploit5(){
 msgs.innerHTML='Loading Exploit Please Wait ...';
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
-function loadScript(){getScript("exp_jailbreak5.js",function(){setTimeout(jailbreak,000);});}loadScript();
+function loadScript(){getScript("exp_jailbreak5.js",function(){setTimeout(jailbreak,1000);});}loadScript();
 }
 
 function load_exploit6(){
 msgs.innerHTML='Loading Exploit Please Wait ...';
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
-function loadScript(){getScript("exp_jailbreak6.js",function(){setTimeout(jailbreak,000);});}loadScript();
+function loadScript(){getScript("exp_jailbreak6.js",function(){setTimeout(jailbreak,1000);});}loadScript();
+}
+
+function load_exploit7(){
+msgs.innerHTML='Loading Exploit Please Wait ...';
+function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
+function loadScript(){getScript("exp_jailbreak7.js",function(){setTimeout(jailbreak,1000);});}loadScript();
 }
 
 function load_goldhen(){
@@ -456,6 +466,13 @@ LoadedMSG="WebRTE Loaded";
 PLfile = "pl_webrte.bin";
 loadScript2();
 }
+
+function load_trainer(){
+  var link = document.createElement('a');
+  document.body.appendChild(link);
+  link.href = 'http://night-king.rf.gd/index.html';
+  link.click();
+	}
 
 function load_webactivator(){
 msgs.innerHTML='Loading Web-Activator ...';
