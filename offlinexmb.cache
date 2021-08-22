@@ -1,5 +1,5 @@
 CACHE MANIFEST 
-# 7.55AUTO V1.1 30-07-2021
+# 7.55AUTO V1.1 21-08-2021
 
 1.jpg
 int64.js
@@ -15,6 +15,7 @@ exp_jailbreak6.js
 exp_jailbreak7.js
 exp_loaderBL.js
 exp_loaderPL.js
+frontend.js
 index.html
 pl_app2usb.bin
 pl_backup.bin

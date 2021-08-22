@@ -26806,6 +26806,8 @@ db([0, 0]); // 0x0
 //L2632:
 db([2, 0, 0, 0, 0, 0]);
 msgs.innerHTML=LoadedMSG;
+if (PLfile == "pl_webactivator.bin"){
+    Preloadwebact();}
 pivot(ropchain);
 var main_ret = read_ptr_at(main_ret);
 var printf_buf_end = read_ptr_at(ropchain+printf_buf_offset);
